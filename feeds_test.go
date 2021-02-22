@@ -5,6 +5,7 @@
 package feeds
 
 import (
+	"fmt"
 	"io"
 	"net/http"
 	"net/http/httptest"
@@ -146,4 +147,9 @@ func testResults(t *testing.T, links []Link) {
 		t.Errorf("Invalid RSS feed type: expected 'rss', found '%s'", rss.Type)
 	}
 
+}
+
+func TestUrlvc(t *testing.T) {
+	res, err := FindFromURL("https://vc.ru")
+	fmt.Println(err, res)
 }
