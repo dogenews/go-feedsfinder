@@ -4,6 +4,10 @@
 
 Feeds finder is Go package that provides functions for finding RSS/Atom feeds in a web page.
 
+## New in fork
+
+switch on go mod
+
 ## Installation
 
 ```go get github.com/gilliek/go-feedsfinder/feeds```

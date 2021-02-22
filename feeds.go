@@ -15,7 +15,7 @@ import (
 	"net/url"
 	"path/filepath"
 
-	"code.google.com/p/go.net/html"
+	"golang.org/x/net/html"
 )
 
 const (

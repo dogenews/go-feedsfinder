@@ -8,7 +8,6 @@ import (
 	"io"
 	"net/http"
 	"net/http/httptest"
-	"os"
 	"testing"
 )
 
@@ -28,6 +27,7 @@ const (
 )
 
 func TestFind(t *testing.T) {
+
 	links, err := Find([]byte(htmlCode), "")
 	if err != nil {
 		t.Fatal(links)
@@ -53,7 +53,7 @@ func TestFindFromURL(t *testing.T) {
 }
 
 func TestFindFromFile(t *testing.T) {
-	links, err := FindFromFile(os.Getenv("GOPATH")+"/src/github.com/gilliek/go-feedsfinder/testdata/index.html", "")
+	links, err := FindFromFile("testdata/index.html", "")
 	if err != nil {
 		t.Fatal(links)
 	}
