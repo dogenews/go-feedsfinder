@@ -1,4 +1,4 @@
-module www2feed
+module github.com/dogenews/www2feed
 
 go 1.16
 
